@@ -88,7 +88,12 @@ Tip: Install the following useful plugins for developing with Angular:
 ## If you are offline or behind a very restrictive firewall
 
 To make things easier, the starter kit uses an Web API located at
-http://www.angular.at/api/flight. If your current environment does not allow to access this API, you can use a local one:
+http://www.angular.at/api/flight.
+
+If your current environment does not allow access to that API you can use this secure one:
+* https://demo.angulararchitects.io/api/Flight (https://demo.angulararchitects.io/api/Airport, ...)
+
+If your current environment does not allow that either, you can use a local one:
 
 1. Open a separate console window in the starter kit's root and start the local server using ``npm run json-server``.
 2. Open the file ``libs\flight-lib\src\lib\services\flight.service.ts`` and set the field ``baseUrl`` to the value ``http://localhost:3000``.

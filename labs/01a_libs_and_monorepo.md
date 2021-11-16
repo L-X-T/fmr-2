@@ -8,7 +8,7 @@
   - [Bonus: Writing a Passenger Library ***](#bonus-writing-a-passenger-library-)
 
 
-## Using the Project Monorepo
+## Using the Monorepo
 
 In this exercise, you will expand your application by one page that lists all airports. You can orientate yourself by the existing `FlightSearchComponent`. The web API with the airports can be found here: `http://www.angular.at/api/airport`. 
 
@@ -16,7 +16,7 @@ Please note that the returned data is just an array with strings. For data acces
 
 You can follow these steps:
 
-1. Consider the Web API at `http://www.angular.at/api/airport`. Note that this Web API responds with either XML or JSON, and the answer is just an **array of strings**.
+1. Consider the Web API at `http://www.angular.at/api/airport` (if you need a secure URL try this one: `https://demo.angulararchitects.io/api/Airport`). Note that this Web API responds with either XML or JSON, and the answer is just an **array of strings**.
 
     An example of the JSON-based answer can be found here: http://www.angular.at/help. While the XML response uses Pascal-Case (eg ` From`), the JSON response uses the usual Camel case (eg ` from`). Thus, the practices of the two standards are taken into account.
 
@@ -589,7 +589,7 @@ npm run ng -- generate lib passenger-api
 
 The Web API for passengers can be found here:
 
-    - www.angular.at/api/passenger
+    - www.angular.at/passenger (or https://demo.angulararchitects.io/api/Passenger)
 
 You can load data using ``GET`` and write data using ``POST``. To update an existing passenger, use POST with his/her current Id. To insert a new one, use POST with the Id ``0``.
 
