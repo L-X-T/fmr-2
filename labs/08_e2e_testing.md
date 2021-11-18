@@ -12,6 +12,8 @@ Go to your package.json and add this run script.
 
 ### 1. Add a sanity check
 
+Before you start, please make sure you use English as your default language.
+
 Clean up the existing file `app.spec.ts` file in apps/flight-app-e2e/src/integration and add the following first test (you may need the first line comment to keep your IDE calm).
 
 ```typescript
@@ -87,7 +89,7 @@ A click on search should get use three result flights.
 it.only('should display 3 flights on search', () => {
   cy.get('flight-search button:first').contains('Search').click();
 
-  cy.get('div.row > div').should('have.length', '3');
+  cy.get('div.row > div').should('have.length', '5');
 });
 ```
 
@@ -97,11 +99,11 @@ Click on "Remove" should update the basket.
 
 ```typescript
 it.only('should remove flight from basket', () => {
-  cy.get('flight-search button:first').contains('Search').click();
+  cy.get('flight-search form button:first').contains('Search').click();
 
-  cy.get('div.row > div:first button:first').contains('Remove').click();
+  cy.get('div.row > div:first button:first').contains('Select').click();
 
-  cy.get('flight-search div.card:last').contains('"3": false');
+  cy.get('flight-search div.card:last').contains('"3": true');
 });
 ```
 
